@@ -1,0 +1,309 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B2DA8BAC1E6DB31800933BCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DA8BAB1E6DB31800933BCF /* AppDelegate.swift */; };
+		B2DA8BAE1E6DB31900933BCF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DA8BAD1E6DB31900933BCF /* ViewController.swift */; };
+		B2DA8BB11E6DB31C00933BCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2DA8BAF1E6DB31C00933BCF /* Main.storyboard */; };
+		B2DA8BB31E6DB32000933BCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2DA8BB21E6DB32000933BCF /* Assets.xcassets */; };
+		B2DA8BB61E6DB32100933BCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2DA8BB41E6DB32100933BCF /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B2DA8BA81E6DB31800933BCF /* Tinkoff Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tinkoff Chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2DA8BAB1E6DB31800933BCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B2DA8BAD1E6DB31900933BCF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B2DA8BB01E6DB31C00933BCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B2DA8BB21E6DB32000933BCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B2DA8BB51E6DB32100933BCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B2DA8BB71E6DB32300933BCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B2DA8BA51E6DB31500933BCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B2DA8B9F1E6DB31400933BCF = {
+			isa = PBXGroup;
+			children = (
+				B2DA8BAA1E6DB31800933BCF /* Tinkoff Chat */,
+				B2DA8BA91E6DB31800933BCF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B2DA8BA91E6DB31800933BCF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B2DA8BA81E6DB31800933BCF /* Tinkoff Chat.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B2DA8BAA1E6DB31800933BCF /* Tinkoff Chat */ = {
+			isa = PBXGroup;
+			children = (
+				B2DA8BAB1E6DB31800933BCF /* AppDelegate.swift */,
+				B2DA8BAD1E6DB31900933BCF /* ViewController.swift */,
+				B2DA8BAF1E6DB31C00933BCF /* Main.storyboard */,
+				B2DA8BB21E6DB32000933BCF /* Assets.xcassets */,
+				B2DA8BB41E6DB32100933BCF /* LaunchScreen.storyboard */,
+				B2DA8BB71E6DB32300933BCF /* Info.plist */,
+			);
+			path = "Tinkoff Chat";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B2DA8BA71E6DB31500933BCF /* Tinkoff Chat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2DA8BBA1E6DB32300933BCF /* Build configuration list for PBXNativeTarget "Tinkoff Chat" */;
+			buildPhases = (
+				B2DA8BA41E6DB31500933BCF /* Sources */,
+				B2DA8BA51E6DB31500933BCF /* Frameworks */,
+				B2DA8BA61E6DB31500933BCF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Tinkoff Chat";
+			productName = "Tinkoff Chat";
+			productReference = B2DA8BA81E6DB31800933BCF /* Tinkoff Chat.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B2DA8BA01E6DB31400933BCF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Alphabet;
+				TargetAttributes = {
+					B2DA8BA71E6DB31500933BCF = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = CS4FA9N656;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = B2DA8BA31E6DB31400933BCF /* Build configuration list for PBXProject "Tinkoff Chat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B2DA8B9F1E6DB31400933BCF;
+			productRefGroup = B2DA8BA91E6DB31800933BCF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B2DA8BA71E6DB31500933BCF /* Tinkoff Chat */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B2DA8BA61E6DB31500933BCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2DA8BB61E6DB32100933BCF /* LaunchScreen.storyboard in Resources */,
+				B2DA8BB31E6DB32000933BCF /* Assets.xcassets in Resources */,
+				B2DA8BB11E6DB31C00933BCF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B2DA8BA41E6DB31500933BCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2DA8BAE1E6DB31900933BCF /* ViewController.swift in Sources */,
+				B2DA8BAC1E6DB31800933BCF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B2DA8BAF1E6DB31C00933BCF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2DA8BB01E6DB31C00933BCF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B2DA8BB41E6DB32100933BCF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2DA8BB51E6DB32100933BCF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B2DA8BB81E6DB32300933BCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B2DA8BB91E6DB32300933BCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B2DA8BBB1E6DB32300933BCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CS4FA9N656;
+				INFOPLIST_FILE = "Tinkoff Chat/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Lul.Tinkoff-Chat";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		B2DA8BBC1E6DB32300933BCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CS4FA9N656;
+				INFOPLIST_FILE = "Tinkoff Chat/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Lul.Tinkoff-Chat";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B2DA8BA31E6DB31400933BCF /* Build configuration list for PBXProject "Tinkoff Chat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2DA8BB81E6DB32300933BCF /* Debug */,
+				B2DA8BB91E6DB32300933BCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2DA8BBA1E6DB32300933BCF /* Build configuration list for PBXNativeTarget "Tinkoff Chat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2DA8BBB1E6DB32300933BCF /* Debug */,
+				B2DA8BBC1E6DB32300933BCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B2DA8BA01E6DB31400933BCF /* Project object */;
+}
