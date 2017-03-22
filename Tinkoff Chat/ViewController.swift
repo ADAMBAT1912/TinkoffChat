@@ -10,18 +10,31 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate{
 
-    
-    private var tapCounter = 0
-    var imagePicker: UIImagePickerController!
-    
-    
-    
+   //MARK: - Outlets
+    @IBOutlet weak var profileNameLabel: UILabel!
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var aboutLabel: UILabel!
+    @IBOutlet weak var profileImageButton: UIButton!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var profileField: UITextField!
     @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var profileTextView: UITextView!
+    @IBOutlet weak var nameImageProfile: UILabel!
+    @IBOutlet weak var blackColorButton: UIButton!
+    @IBOutlet weak var redColorButton: UIButton!
+    @IBOutlet weak var greenColorButton: UIButton!
+    @IBOutlet weak var blueColorButton: UIButton!
+    @IBOutlet weak var pinkColorButton: UIButton!
     
     
+    
+  //MARK: - Methods
+    private var tapCounter = 0
+    var imagePicker: UIImagePickerController!
+
     @IBAction func colorButtons(_ sender: UIButton) {
+        
+       
         switch sender.tag {
         case 1:
             label.textColor = UIColor.black
@@ -37,7 +50,7 @@ class ViewController: UIViewController, UITextFieldDelegate,UINavigationControll
             label.textColor = UIColor.darkGray
         }
         
-  
+          print(sender)
     }
     
    @IBAction func chooseImage(_ sender: Any) {
@@ -109,21 +122,128 @@ class ViewController: UIViewController, UITextFieldDelegate,UINavigationControll
     
     }
     
+    //MARK: - VIewController Lifecycle
     
-        override func viewDidLoad() {
-       
-            super.viewDidLoad()
-            
-            self.profileField.delegate = self
-            
-            let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction))
-           
-            view.addGestureRecognizer(swipeGesture)
-           
-            swipeGesture.direction = UISwipeGestureRecognizerDirection.down
-            
+    override func viewDidLoad() {
+        print("VIEW DID LOAD")
+        super.viewDidLoad()
+        print(profileNameLabel)
+        print(saveButton)
+        print(aboutLabel)
+        print(profileImageButton)
+        print(label)
+        print(profileField)
+        print(profileImage)
+        print(profileTextView)
+        print(nameImageProfile)
+        print(blackColorButton)
+        print(redColorButton)
+        print(greenColorButton)
+        print(blueColorButton)
+        print(pinkColorButton)
+
         
+        
+        self.profileField.delegate = self
+        
+        let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction))
+        
+        view.addGestureRecognizer(swipeGesture)
+        
+        swipeGesture.direction = UISwipeGestureRecognizerDirection.down
+        
+       
     }
+    override func viewWillAppear(_ animated: Bool) {
+        print("VIEW WILL APPEAR")
+       
+        print(profileNameLabel)
+        print(saveButton)
+        print(aboutLabel)
+        print(profileImageButton)
+        print(label)
+        print(profileField)
+        print(profileImage)
+        print(profileTextView)
+        print(nameImageProfile)
+        print(blackColorButton)
+        print(redColorButton)
+        print(greenColorButton)
+        print(blueColorButton)
+        print(pinkColorButton)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+       
+            print("VIEW DID APPEAR")
+            
+            print(profileNameLabel)
+            print(saveButton)
+            print(aboutLabel)
+            print(profileImageButton)
+            print(label)
+            print(profileField)
+            print(profileImage)
+            print(profileTextView)
+            print(nameImageProfile)
+            print(blackColorButton)
+            print(redColorButton)
+            print(greenColorButton)
+            print(blueColorButton)
+            print(pinkColorButton)
+            
+
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+      
+            print("VIEW WILL DISAPPEAR")
+            
+            print(profileNameLabel)
+            print(saveButton)
+            print(aboutLabel)
+            print(profileImageButton)
+            print(label)
+            print(profileField)
+            print(profileImage)
+            print(profileTextView)
+            print(nameImageProfile)
+            print(blackColorButton)
+            print(redColorButton)
+            print(greenColorButton)
+            print(blueColorButton)
+            print(pinkColorButton)
+            
+
+    }
+        
+    override func viewDidDisappear(_ animated: Bool){
+        print("VIEW DID DISAPPEAR")
+        
+        print(profileNameLabel)
+        print(saveButton)
+        print(aboutLabel)
+        print(profileImageButton)
+        print(label)
+        print(profileField)
+        print(profileImage)
+        print(profileTextView)
+        print(nameImageProfile)
+        print(blackColorButton)
+        print(redColorButton)
+        print(greenColorButton)
+        print(blueColorButton)
+        print(pinkColorButton)
+    }
+    
+
+  //MARK: - Func
+
+
+    
+    
+
+    
     
     func swipeAction(){
        
