@@ -7,14 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B2D73AA11E8677E700858588 /* ConversationsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D73AA01E8677E700858588 /* ConversationsListTableViewController.swift */; };
+		B2D73AA31E87137F00858588 /* ConversationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D73AA21E87137E00858588 /* ConversationsTableViewCell.swift */; };
+		B2D73AA51E873CF800858588 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D73AA41E873CF700858588 /* Protocol.swift */; };
+		B2D73AA71E888D3300858588 /* SectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D73AA61E888D2F00858588 /* SectionModel.swift */; };
 		B2DA8BAC1E6DB31800933BCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DA8BAB1E6DB31800933BCF /* AppDelegate.swift */; };
 		B2DA8BAE1E6DB31900933BCF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DA8BAD1E6DB31900933BCF /* ViewController.swift */; };
 		B2DA8BB11E6DB31C00933BCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2DA8BAF1E6DB31C00933BCF /* Main.storyboard */; };
 		B2DA8BB31E6DB32000933BCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2DA8BB21E6DB32000933BCF /* Assets.xcassets */; };
 		B2DA8BB61E6DB32100933BCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2DA8BB41E6DB32100933BCF /* LaunchScreen.storyboard */; };
+		B2F227061E88AD3800700CF8 /* MessengerWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F227051E88AD3800700CF8 /* MessengerWindow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B2D73AA01E8677E700858588 /* ConversationsListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationsListTableViewController.swift; sourceTree = "<group>"; };
+		B2D73AA21E87137E00858588 /* ConversationsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationsTableViewCell.swift; sourceTree = "<group>"; };
+		B2D73AA41E873CF700858588 /* Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		B2D73AA61E888D2F00858588 /* SectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionModel.swift; sourceTree = "<group>"; };
 		B2DA8BA81E6DB31800933BCF /* Tinkoff Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tinkoff Chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2DA8BAB1E6DB31800933BCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2DA8BAD1E6DB31900933BCF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +31,7 @@
 		B2DA8BB21E6DB32000933BCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2DA8BB51E6DB32100933BCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2DA8BB71E6DB32300933BCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2F227051E88AD3800700CF8 /* MessengerWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessengerWindow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +65,16 @@
 			isa = PBXGroup;
 			children = (
 				B2DA8BAB1E6DB31800933BCF /* AppDelegate.swift */,
+				B2D73AA21E87137E00858588 /* ConversationsTableViewCell.swift */,
+				B2D73AA61E888D2F00858588 /* SectionModel.swift */,
 				B2DA8BAD1E6DB31900933BCF /* ViewController.swift */,
+				B2D73AA01E8677E700858588 /* ConversationsListTableViewController.swift */,
 				B2DA8BAF1E6DB31C00933BCF /* Main.storyboard */,
 				B2DA8BB21E6DB32000933BCF /* Assets.xcassets */,
 				B2DA8BB41E6DB32100933BCF /* LaunchScreen.storyboard */,
 				B2DA8BB71E6DB32300933BCF /* Info.plist */,
+				B2D73AA41E873CF700858588 /* Protocol.swift */,
+				B2F227051E88AD3800700CF8 /* MessengerWindow.swift */,
 			);
 			path = "Tinkoff Chat";
 			sourceTree = "<group>";
@@ -96,7 +111,7 @@
 				TargetAttributes = {
 					B2DA8BA71E6DB31500933BCF = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = CS4FA9N656;
+						DevelopmentTeam = 4RWLL37A47;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -137,8 +152,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2D73AA31E87137F00858588 /* ConversationsTableViewCell.swift in Sources */,
 				B2DA8BAE1E6DB31900933BCF /* ViewController.swift in Sources */,
+				B2D73AA11E8677E700858588 /* ConversationsListTableViewController.swift in Sources */,
 				B2DA8BAC1E6DB31800933BCF /* AppDelegate.swift in Sources */,
+				B2D73AA51E873CF800858588 /* Protocol.swift in Sources */,
+				B2D73AA71E888D3300858588 /* SectionModel.swift in Sources */,
+				B2F227061E88AD3800700CF8 /* MessengerWindow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +279,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = CS4FA9N656;
+				DEVELOPMENT_TEAM = 4RWLL37A47;
 				INFOPLIST_FILE = "Tinkoff Chat/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -274,7 +294,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = CS4FA9N656;
+				DEVELOPMENT_TEAM = 4RWLL37A47;
 				INFOPLIST_FILE = "Tinkoff Chat/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
