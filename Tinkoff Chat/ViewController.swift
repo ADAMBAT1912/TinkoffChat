@@ -9,7 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate{
-
+    
+    
    //MARK: - Outlets
     @IBOutlet weak var profileNameLabel: UILabel!
     @IBOutlet weak var saveButton: UIButton!
@@ -125,6 +126,7 @@ class ViewController: UIViewController, UITextFieldDelegate,UINavigationControll
     //MARK: - VIewController Lifecycle
     
     override func viewDidLoad() {
+        self.navigationController?.isNavigationBarHidden = true
         print("VIEW DID LOAD")
         super.viewDidLoad()
         print(profileNameLabel)

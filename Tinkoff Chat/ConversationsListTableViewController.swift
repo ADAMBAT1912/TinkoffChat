@@ -9,18 +9,23 @@
 import UIKit
 import Foundation
 
-class ConversationsListTableViewController: UITableViewController{
+class ConversationsListTableViewController: UIViewController, UITableViewDataSource,UITableViewDelegate{
 
+   
+    
+    @IBOutlet var tableView: UITableView!
     
     let cell1 = ConversationsTableViewCell()
     let date = Date()
     let calendar = Calendar.current
+    
    var sections: [Section] = SectionsData().getSectionsFromData()
     
          override func viewDidLoad() {
         super.viewDidLoad()
       
-        
+        self.navigationController?.isNavigationBarHidden = false
+           
         self.title = "Tinkoff Chat"
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -36,19 +41,19 @@ class ConversationsListTableViewController: UITableViewController{
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return sections.count
     }
 
-   override  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
            return sections[section].items.count
     
     
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
          return sections[section].heading
     }
     
@@ -56,7 +61,7 @@ class ConversationsListTableViewController: UITableViewController{
     
     
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "conversation", for: indexPath) as! ConversationsTableViewCell
        
 
@@ -74,13 +79,22 @@ class ConversationsListTableViewController: UITableViewController{
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
         let vc = segue.destination as! MessengerWindow
-        let id = sender as! Int//сохраним отправителя в поле такого же типа в Detail
+        let id =   sender as! Int
         vc.id = id
+        if let indexPath = tableView.indexPathForSelectedRow{
+            let path = indexPath.section
+            let detailVC = segue.destination as! MessengerWindow
+            detailVC.selectedPath = path
+        }
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "messenger", sender: indexPath.item)
+        
+        
+        
     }
 
     /*

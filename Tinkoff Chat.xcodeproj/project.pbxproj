@@ -17,6 +17,7 @@
 		B2DA8BB31E6DB32000933BCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2DA8BB21E6DB32000933BCF /* Assets.xcassets */; };
 		B2DA8BB61E6DB32100933BCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2DA8BB41E6DB32100933BCF /* LaunchScreen.storyboard */; };
 		B2F227061E88AD3800700CF8 /* MessengerWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F227051E88AD3800700CF8 /* MessengerWindow.swift */; };
+		B2F227081E89BDA000700CF8 /* MessengerWindowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F227071E89BDA000700CF8 /* MessengerWindowCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		B2DA8BB51E6DB32100933BCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2DA8BB71E6DB32300933BCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2F227051E88AD3800700CF8 /* MessengerWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessengerWindow.swift; sourceTree = "<group>"; };
+		B2F227071E89BDA000700CF8 /* MessengerWindowCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessengerWindowCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,8 @@
 			children = (
 				B2DA8BAB1E6DB31800933BCF /* AppDelegate.swift */,
 				B2D73AA21E87137E00858588 /* ConversationsTableViewCell.swift */,
+				B2F227071E89BDA000700CF8 /* MessengerWindowCell.swift */,
+				B2F227051E88AD3800700CF8 /* MessengerWindow.swift */,
 				B2D73AA61E888D2F00858588 /* SectionModel.swift */,
 				B2DA8BAD1E6DB31900933BCF /* ViewController.swift */,
 				B2D73AA01E8677E700858588 /* ConversationsListTableViewController.swift */,
@@ -74,7 +78,6 @@
 				B2DA8BB41E6DB32100933BCF /* LaunchScreen.storyboard */,
 				B2DA8BB71E6DB32300933BCF /* Info.plist */,
 				B2D73AA41E873CF700858588 /* Protocol.swift */,
-				B2F227051E88AD3800700CF8 /* MessengerWindow.swift */,
 			);
 			path = "Tinkoff Chat";
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 				B2D73AA11E8677E700858588 /* ConversationsListTableViewController.swift in Sources */,
 				B2DA8BAC1E6DB31800933BCF /* AppDelegate.swift in Sources */,
 				B2D73AA51E873CF800858588 /* Protocol.swift in Sources */,
+				B2F227081E89BDA000700CF8 /* MessengerWindowCell.swift in Sources */,
 				B2D73AA71E888D3300858588 /* SectionModel.swift in Sources */,
 				B2F227061E88AD3800700CF8 /* MessengerWindow.swift in Sources */,
 			);

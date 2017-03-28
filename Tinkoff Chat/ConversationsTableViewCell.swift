@@ -17,11 +17,11 @@ class ConversationsTableViewCell: UITableViewCell{
     @IBOutlet weak var lastMessage: UILabel!
     
    
-    var name = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t"]
+    
    
     @IBOutlet weak var onlineOfflineImage: UIImageView!
     
-    var hasUnreadMessage = [true,false,true,true,true,false,false,true,false,true,true,false,true,false,true,false,true,true,false,true]
+    
 
     
     override func awakeFromNib() {
