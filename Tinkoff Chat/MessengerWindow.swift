@@ -19,13 +19,14 @@ class MessengerWindow: UIViewController,UITableViewDataSource,UITableViewDelegat
     }
     
     var sections: [Section] = SectionsData().getSectionsFromData()
+    var messeges: [Messege] = MessageData().getMessageFromData()
     
     @IBOutlet weak var tableView: UITableView!
     
     var id:Int 
     var selectedPath: Int
     var message:String?
-    var row: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource = self
@@ -38,26 +39,21 @@ class MessengerWindow: UIViewController,UITableViewDataSource,UITableViewDelegat
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return row
+        return messeges[section].type.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellOut = tableView.dequeueReusableCell(withIdentifier: "out") as! MessengerWindowCell
-        
-        
+        cellOut.outcomeMessage.text = messeges[indexPath.section].type[indexPath.row]
         return cellOut
-    }
-        
-    @IBAction func sendMessage(_ sender: Any) {
-        if enterMessage.text != nil{
-            message = enterMessage.text
-            func tableView(tableView: UITableView, cellForRowAt: IndexPath) -> UITableViewCell{
-            let cellOut = tableView.dequeueReusableCell(withIdentifier: "out") as! MessengerWindowCell
-                cellOut.outcomeMessage.text = message
-                
-                return cellOut
             }
+        
+    @IBAction func sendMessage(_ sender: Any)  {
+        let cellOut = tableView.dequeueReusableCell(withIdentifier: "out") as! MessengerWindowCell
+        if enterMessage.text != nil{
+            
+            messeges[0].type.append(enterMessage.text!)
             enterMessage.text = nil
-            message = nil
+            cellOut.outcomeMessage.text = messeges[0].type[1]
         }
         
     }

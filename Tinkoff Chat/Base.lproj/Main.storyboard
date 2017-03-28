@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя пользователя" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbf-vU-16o">
-                                <rect key="frame" x="16" y="64" width="130.5" height="18"/>
+                                <rect key="frame" x="16" y="20" width="130.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -45,7 +45,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kRC-Ky-Z4p">
-                                <rect key="frame" x="16" y="90" width="288" height="30"/>
+                                <rect key="frame" x="16" y="46" width="288" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="cA8-cm-8iE"/>
                                 </constraints>
@@ -54,13 +54,13 @@
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="О себе" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ugn-hO-bfl">
-                                <rect key="frame" x="16" y="130" width="49.5" height="18"/>
+                                <rect key="frame" x="16" y="86" width="49.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="6NX-PG-9N9">
-                                <rect key="frame" x="16" y="156" width="288" height="88"/>
+                                <rect key="frame" x="16" y="112" width="288" height="88"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="88" id="gkv-5d-Ydh"/>
@@ -69,13 +69,13 @@
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Изображение профиля" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="etn-uP-uu7">
-                                <rect key="frame" x="16" y="265" width="165" height="18"/>
+                                <rect key="frame" x="16" y="221" width="165" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1 копия" translatesAutoresizingMaskIntoConstraints="NO" id="Zlz-QK-Pov">
-                                <rect key="frame" x="80" y="297" width="160" height="160"/>
+                                <rect key="frame" x="80" y="253" width="160" height="160"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Zlz-QK-Pov" secondAttribute="height" multiplier="1:1" id="UZ0-py-5Q3"/>
                                     <constraint firstAttribute="height" constant="160" id="jvU-kO-9tn"/>
@@ -138,7 +138,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ql0-tl-5h9" userLabel="chooseProfileImage">
-                                <rect key="frame" x="80" y="297" width="160" height="160"/>
+                                <rect key="frame" x="80" y="253" width="160" height="160"/>
                                 <connections>
                                     <action selector="chooseImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xfj-Vg-Ljg"/>
                                 </connections>
@@ -281,11 +281,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Tinkoff Chat" id="Ybj-5J-8EP">
                         <barButtonItem key="backBarButtonItem" id="MKS-yZ-xoF"/>
-                        <barButtonItem key="leftBarButtonItem" title="Profile" id="y1I-Fl-oE0">
-                            <connections>
-                                <segue destination="BYZ-38-t0r" kind="presentation" id="6zP-6G-ysC"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="LId-FW-Tkc" id="Eti-F3-ZmC"/>
@@ -366,14 +361,14 @@
                                 </prototypes>
                             </tableView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yvc-mE-aP7">
-                                <rect key="frame" x="0.0" y="538" width="266" height="30"/>
+                                <rect key="frame" x="0.0" y="538" width="276" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ot-UG-pt7">
-                                <rect key="frame" x="274" y="538" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="284" y="538" width="36" height="30"/>
+                                <state key="normal" title="Send"/>
                                 <connections>
                                     <action selector="sendMessage:" destination="A4e-TY-lCf" eventType="touchUpInside" id="IlF-nO-ns8"/>
                                 </connections>
@@ -423,7 +418,4 @@
     <resources>
         <image name="1 копия" width="600" height="600"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="6zP-6G-ysC"/>
-    </inferredMetricsTieBreakers>
 </document>

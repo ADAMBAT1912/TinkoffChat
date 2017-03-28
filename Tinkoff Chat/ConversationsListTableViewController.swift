@@ -25,7 +25,7 @@ class ConversationsListTableViewController: UIViewController, UITableViewDataSou
         super.viewDidLoad()
       
         self.navigationController?.isNavigationBarHidden = false
-           
+           self.navigationItem.hidesBackButton = true
         self.title = "Tinkoff Chat"
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -57,8 +57,9 @@ class ConversationsListTableViewController: UIViewController, UITableViewDataSou
          return sections[section].heading
     }
     
+
     
-    
+   
     
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -78,8 +79,12 @@ class ConversationsListTableViewController: UIViewController, UITableViewDataSou
     
     }
     
+    
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
+        
         let vc = segue.destination as! MessengerWindow
         let id =   sender as! Int
         vc.id = id

@@ -21,3 +21,14 @@ struct Section {
         
     }
 }
+
+struct Messege {
+    
+    var type: [String]
+    
+    init(text:[String]){
+        
+        type = text
+        
+    }
+}
