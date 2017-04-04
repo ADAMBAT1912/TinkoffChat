@@ -26,7 +26,8 @@ class ViewController: UIViewController, UITextFieldDelegate,UINavigationControll
     @IBOutlet weak var greenColorButton: UIButton!
     @IBOutlet weak var blueColorButton: UIButton!
     @IBOutlet weak var pinkColorButton: UIButton!
-    
+   
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     
   //MARK: - Methods
@@ -126,24 +127,13 @@ class ViewController: UIViewController, UITextFieldDelegate,UINavigationControll
     //MARK: - VIewController Lifecycle
     
     override func viewDidLoad() {
+        
         self.navigationController?.isNavigationBarHidden = true
         print("VIEW DID LOAD")
+        
         super.viewDidLoad()
-        print(profileNameLabel)
-        print(saveButton)
-        print(aboutLabel)
-        print(profileImageButton)
-        print(label)
-        print(profileField)
-        print(profileImage)
-        print(profileTextView)
-        print(nameImageProfile)
-        print(blackColorButton)
-        print(redColorButton)
-        print(greenColorButton)
-        print(blueColorButton)
-        print(pinkColorButton)
-
+     
+    
         
         
         self.profileField.delegate = self
@@ -156,89 +146,7 @@ class ViewController: UIViewController, UITextFieldDelegate,UINavigationControll
         
        
     }
-    override func viewWillAppear(_ animated: Bool) {
-        print("VIEW WILL APPEAR")
-       
-        print(profileNameLabel)
-        print(saveButton)
-        print(aboutLabel)
-        print(profileImageButton)
-        print(label)
-        print(profileField)
-        print(profileImage)
-        print(profileTextView)
-        print(nameImageProfile)
-        print(blackColorButton)
-        print(redColorButton)
-        print(greenColorButton)
-        print(blueColorButton)
-        print(pinkColorButton)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-       
-            print("VIEW DID APPEAR")
-            
-            print(profileNameLabel)
-            print(saveButton)
-            print(aboutLabel)
-            print(profileImageButton)
-            print(label)
-            print(profileField)
-            print(profileImage)
-            print(profileTextView)
-            print(nameImageProfile)
-            print(blackColorButton)
-            print(redColorButton)
-            print(greenColorButton)
-            print(blueColorButton)
-            print(pinkColorButton)
-            
-
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-      
-            print("VIEW WILL DISAPPEAR")
-            
-            print(profileNameLabel)
-            print(saveButton)
-            print(aboutLabel)
-            print(profileImageButton)
-            print(label)
-            print(profileField)
-            print(profileImage)
-            print(profileTextView)
-            print(nameImageProfile)
-            print(blackColorButton)
-            print(redColorButton)
-            print(greenColorButton)
-            print(blueColorButton)
-            print(pinkColorButton)
-            
-
-    }
-        
-    override func viewDidDisappear(_ animated: Bool){
-        print("VIEW DID DISAPPEAR")
-        
-        print(profileNameLabel)
-        print(saveButton)
-        print(aboutLabel)
-        print(profileImageButton)
-        print(label)
-        print(profileField)
-        print(profileImage)
-        print(profileTextView)
-        print(nameImageProfile)
-        print(blackColorButton)
-        print(redColorButton)
-        print(greenColorButton)
-        print(blueColorButton)
-        print(pinkColorButton)
-    }
-    
-
+   
   //MARK: - Func
 
 
@@ -275,14 +183,109 @@ class ViewController: UIViewController, UITextFieldDelegate,UINavigationControll
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func saveAction(_ sender: Any) {
-      
-        
-       print("Сохранение данных профиля")
-      
+    @IBAction func operationSavingData(_ sender: Any) {
+        let operationQueue = OperationQueue()
+        operationQueue.qualityOfService = .default
+        operationQueue.addOperation {
+            self.activityIndicator.startAnimating()
+            let fileName = "Name"
+            let fileAbout = "About"
+            let fileImage = "Image"
+            let fileColor = "Color"
+            let DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+            
+            let fileURLName = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")
+            let fileURLAbout = DocumentDirURL.appendingPathComponent(fileAbout).appendingPathExtension("txt")
+            let fileURLImage = DocumentDirURL.appendingPathComponent("\(fileImage).png")
+            let fileURLColor = DocumentDirURL.appendingPathComponent(fileColor).appendingPathExtension("txt")
+            
+            print("FilePath: \(fileURLName.path)")
+            
+            let writeName = self.profileField.text
+            let writeAbout = self.profileTextView.text
+            let writeImage = UIImagePNGRepresentation(self.profileImage.image!)
+            let writeColor = String(describing: self.label.textColor!)
+            do {
+                // Write to the file
+                try writeName?.write(to: fileURLName, atomically: true, encoding: String.Encoding.utf8)
+                try writeAbout?.write(to: fileURLAbout, atomically: true, encoding: String.Encoding.utf8)
+                try writeImage?.write(to: fileURLImage, options: .atomic)
+                
+                try writeColor.write(to: fileURLColor, atomically: true, encoding: String.Encoding.utf8)
+                let alert = UIAlertController(title: "Operation", message: "Данные сохранены", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Ок", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                
+            } catch let error as NSError {
+                let alertFail = UIAlertController(title: "Operation", message: "Ошибка при сохранении", preferredStyle: UIAlertControllerStyle.alert)
+                alertFail.addAction(UIAlertAction(title: "Ок", style: UIAlertActionStyle.default, handler: nil))
+                alertFail.addAction(UIAlertAction(title: "Повторить", style: .cancel, handler: nil))
+                self.present(alertFail, animated: true, completion: nil)
+                print(error.localizedDescription)
+            }
+            let alert = UIAlertController(title: "Operation", message: "Данные сохранены", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ок", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            
+            
+            self.activityIndicator.stopAnimating()
+            
+        }
+       
         
     }
+    @IBAction func GCDSavingData(_ sender: Any) {
     
+        let globalQueue = DispatchQueue.global(qos: .default)
+        globalQueue.sync {
+            self.activityIndicator.startAnimating()
+            let fileName = "Name"
+            let fileAbout = "About"
+            let fileImage = "Image"
+            let fileColor = "Color"
+            let DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+            
+            let fileURLName = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")
+            let fileURLAbout = DocumentDirURL.appendingPathComponent(fileAbout).appendingPathExtension("txt")
+            let fileURLImage = DocumentDirURL.appendingPathComponent("\(fileImage).png")
+            let fileURLColor = DocumentDirURL.appendingPathComponent(fileColor).appendingPathExtension("txt")
+            
+            print("FilePath: \(fileURLName.path)")
+            
+            let writeName = self.profileField.text
+            let writeAbout = self.profileTextView.text
+            let writeImage = UIImagePNGRepresentation(self.profileImage.image!)
+            let writeColor = String(describing: self.label.textColor!)
+            do {
+                // Write to the file
+                try writeName?.write(to: fileURLName, atomically: true, encoding: String.Encoding.utf8)
+                try writeAbout?.write(to: fileURLAbout, atomically: true, encoding: String.Encoding.utf8)
+                try writeImage?.write(to: fileURLImage, options: .atomic)
+                    
+                try writeColor.write(to: fileURLColor, atomically: true, encoding: String.Encoding.utf8)
+                let alert = UIAlertController(title: "GCD", message: "Данные сохранены", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Ок", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                
+            } catch let error as NSError {
+                let alertFail = UIAlertController(title: "GCD", message: "Ошибка при сохранении", preferredStyle: UIAlertControllerStyle.alert)
+                alertFail.addAction(UIAlertAction(title: "Ок", style: UIAlertActionStyle.default, handler: nil))
+                alertFail.addAction(UIAlertAction(title: "Повторить", style: .cancel, handler: nil))
+                self.present(alertFail, animated: true, completion: nil)
+                print(error.localizedDescription)
+            }
+            let alert = UIAlertController(title: "GCD", message: "Данные сохранены", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ок", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+
+            
+            self.activityIndicator.stopAnimating()
+           
+        }
+        
     
+
+
 }
 
+}

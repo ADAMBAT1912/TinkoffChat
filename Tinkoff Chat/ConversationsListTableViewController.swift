@@ -12,6 +12,9 @@ import Foundation
 class ConversationsListTableViewController: UIViewController, UITableViewDataSource,UITableViewDelegate{
 
    
+    @IBAction func showProfileScreen(_ sender: Any) {
+        self.dismiss(animated:true,completion:nil)
+    }
     
     @IBOutlet var tableView: UITableView!
     
