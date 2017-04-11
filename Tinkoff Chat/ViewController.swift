@@ -185,7 +185,7 @@ class ViewController: UIViewController, UITextFieldDelegate,UINavigationControll
 
     @IBAction func operationSavingData(_ sender: Any) {
         let operationQueue = OperationQueue()
-        operationQueue.qualityOfService = .default
+        operationQueue.qualityOfService = .userInitiated
         operationQueue.addOperation {
             self.activityIndicator.startAnimating()
             let fileName = "Name"
@@ -231,61 +231,16 @@ class ViewController: UIViewController, UITextFieldDelegate,UINavigationControll
             self.activityIndicator.stopAnimating()
             
         }
-       
+       performSegue(withIdentifier: "11", sender: sender)
         
     }
     @IBAction func GCDSavingData(_ sender: Any) {
-    
-        let globalQueue = DispatchQueue.global(qos: .default)
-        globalQueue.sync {
-            self.activityIndicator.startAnimating()
-            let fileName = "Name"
-            let fileAbout = "About"
-            let fileImage = "Image"
-            let fileColor = "Color"
-            let DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
-            
-            let fileURLName = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")
-            let fileURLAbout = DocumentDirURL.appendingPathComponent(fileAbout).appendingPathExtension("txt")
-            let fileURLImage = DocumentDirURL.appendingPathComponent("\(fileImage).png")
-            let fileURLColor = DocumentDirURL.appendingPathComponent(fileColor).appendingPathExtension("txt")
-            
-            print("FilePath: \(fileURLName.path)")
-            
-            let writeName = self.profileField.text
-            let writeAbout = self.profileTextView.text
-            let writeImage = UIImagePNGRepresentation(self.profileImage.image!)
-            let writeColor = String(describing: self.label.textColor!)
-            do {
-                // Write to the file
-                try writeName?.write(to: fileURLName, atomically: true, encoding: String.Encoding.utf8)
-                try writeAbout?.write(to: fileURLAbout, atomically: true, encoding: String.Encoding.utf8)
-                try writeImage?.write(to: fileURLImage, options: .atomic)
-                    
-                try writeColor.write(to: fileURLColor, atomically: true, encoding: String.Encoding.utf8)
-                let alert = UIAlertController(title: "GCD", message: "Данные сохранены", preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "Ок", style: UIAlertActionStyle.default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
-                
-            } catch let error as NSError {
-                let alertFail = UIAlertController(title: "GCD", message: "Ошибка при сохранении", preferredStyle: UIAlertControllerStyle.alert)
-                alertFail.addAction(UIAlertAction(title: "Ок", style: UIAlertActionStyle.default, handler: nil))
-                alertFail.addAction(UIAlertAction(title: "Повторить", style: .cancel, handler: nil))
-                self.present(alertFail, animated: true, completion: nil)
-                print(error.localizedDescription)
-            }
-            let alert = UIAlertController(title: "GCD", message: "Данные сохранены", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "Ок", style: UIAlertActionStyle.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-
-            
-            self.activityIndicator.stopAnimating()
-           
-        }
-        
+       
+    performSegue(withIdentifier: "11", sender: sender)
     
 
 
 }
+
 
 }
